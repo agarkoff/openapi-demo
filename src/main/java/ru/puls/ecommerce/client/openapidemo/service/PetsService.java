@@ -13,7 +13,7 @@ public class PetsService implements PetsApiDelegate {
     @Override
     public ResponseEntity<List<Pet>> listPets(Integer limit) {
         Pet e1 = new Pet();
-        e1.setName("test");
+        e1.setName2("test");
         return ResponseEntity.ok(List.of(e1));
     }
 }

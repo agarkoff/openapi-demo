@@ -85,13 +85,13 @@ components:
       type: object
       required:
         - id
-        - name
+        - name2
       properties:
         id:
           type: integer
           format: int64
           minimum: 500
-        name:
+        name2:
           type: string
         tag:
           type: string
