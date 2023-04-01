@@ -9,6 +9,7 @@ servers:
 paths:
   /pets:
     get:
+      x-spring-paginated: true
       summary: List all pets
       operationId: listPets
       tags:
