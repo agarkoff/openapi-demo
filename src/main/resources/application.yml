@@ -1,0 +1,7 @@
+springdoc:
+  swagger-ui:
+    urls:
+      - name: petstore
+        url: /openapi/petstore.yml
+      - name: petstore2
+        url: /openapi/petstore2.yml
