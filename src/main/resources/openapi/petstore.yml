@@ -3,9 +3,7 @@ info:
   version: 1.0.0
   title: Swagger Petstore
   license:
-    name: MIT
-servers:
-  - url: http://localhost:8080/
+    name: PULS License
 paths:
   /pets:
     get:

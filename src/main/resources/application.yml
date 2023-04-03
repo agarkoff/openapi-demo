@@ -5,3 +5,5 @@ springdoc:
         url: /openapi/petstore.yml
       - name: petstore2
         url: /openapi/petstore2.yml
+server:
+  port: 8001
