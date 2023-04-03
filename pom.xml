@@ -56,6 +56,27 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.openapitools</groupId>
+                    <artifactId>openapi-generator-maven-plugin</artifactId>
+                    <version>6.4.0</version>
+                    <configuration>
+                        <generatorName>spring</generatorName>
+                        <supportingFilesToGenerate>
+                            ApiUtil.java
+                        </supportingFilesToGenerate>
+                        <configOptions>
+                            <delegatePattern>true</delegatePattern>
+                            <useSpringBoot3>true</useSpringBoot3>
+                            <openApiNullable>false</openApiNullable>
+                        </configOptions>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -73,27 +94,27 @@
             <plugin>
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>6.4.0</version>
                 <executions>
                     <execution>
+                        <id>petstore</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>
-                                ${project.basedir}/src/main/resources/petstore.yml
-                            </inputSpec>
-                            <generatorName>spring</generatorName>
+                            <inputSpec>${project.basedir}/src/main/resources/openapi/petstore.yml</inputSpec>
                             <apiPackage>ru.puls.ecommerce.client.openapidemo.controller</apiPackage>
                             <modelPackage>ru.puls.ecommerce.client.openapidemo.model</modelPackage>
-                            <supportingFilesToGenerate>
-                                ApiUtil.java
-                            </supportingFilesToGenerate>
-                            <configOptions>
-                                <delegatePattern>true</delegatePattern>
-                                <useSpringBoot3>true</useSpringBoot3>
-                                <openApiNullable>false</openApiNullable>
-                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>petstore2</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/openapi/petstore2.yml</inputSpec>
+                            <apiPackage>ru.puls.ecommerce.client.openapidemo.controller</apiPackage>
+                            <modelPackage>ru.puls.ecommerce.client.openapidemo.model</modelPackage>
                         </configuration>
                     </execution>
                 </executions>
