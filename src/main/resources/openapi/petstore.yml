@@ -4,6 +4,9 @@ info:
   title: Swagger Petstore
   license:
     name: PULS License
+servers:
+  - url: /test
+    description: example
 paths:
   /pets:
     get:
